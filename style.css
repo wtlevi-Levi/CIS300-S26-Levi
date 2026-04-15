@@ -1,0 +1,82 @@
+* {box-sizing: border-box;}
+
+body {color: #333333;background-color: #e9e9e9;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+header {background-color: #e60012;text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;} 
+
+header a {text-decoration: none;}
+header a:link {color: #FFFFFF;}
+header a:visited {color: #FFFFFF;}
+header a:hover {color: #5534dd; font-weight: bold;}
+
+h1 {margin-bottom: 0;margin-top: 0; letter-spacing: 0.25em; padding-top: 0.5em;padding-bottom: 0.5em; font-family: Georgia, 'Times New Roman', Times, serif; }
+
+nav {font-weight: bold;padding: 0;font-size: 120%;text-align: center;}
+
+nav li {border-bottom: 1px solid #000033;}
+nav ul {list-style-type: none; margin: 0; padding-left: 0; font-size: 1.2em;}
+
+nav a {text-decoration: none;}
+nav a:link {color: #333333;}
+nav a:hover {color: #a52a2a;}
+
+main {background-color: #e9e9e9; padding-top: 1px;padding-right: 20px;padding-bottom: 20px;padding-left: 30px; display: block; overflow: auto;}
+
+footer {background-color: #e60012; color: #e9e9e9; text-align: center; font-weight: bold; font-style: italic;font-size: 90%;font-family: Georgia, 'Times New Roman', Times, serif;padding: 2em;}
+
+.boldredtext {color: #e60012;font-weight: bold;}
+
+.indigotext {color: #5534dd;}
+
+form {display: flex; flex-direction: column; flex-wrap: nowrap;}
+
+#smashhero {height: 300px; background-image: url(Smash-Ultimate-Banner.avif);  background-repeat: no-repeat;}
+
+#level1hero {height: 102px; width: 100%; background-image: url(Mario-Background-Loop.webp);background-repeat: repeat-x;background-position: bottom left;}
+
+#sportshero {height: 100%; max-width: 100%; background-size: contain; background-image: url(Wii-Sports.png); background-repeat: no-repeat; background-position: center;}
+
+#franchisehero {height: 300px; max-width: 100%; background-image: url(Franchise.png); background-repeat: no-repeat; background-position: center; background-size: contain; background-color: #ffbcb1;margin-top: 20px ;}
+
+table {border: 2px solid #e60012; border-collapse: collapse;}
+table th {border: 2px solid #e60012; padding: 0.5em;}
+table td {border: 2px solid #e60012; padding: 0.5em; text-align: center;}
+tr:nth-of-type(odd) {background-color: #ffbcb1;}
+
+@media (min-width: 800px) {
+  header {text-align: left; padding-left: 1em; padding-right: 2em; background-image: url(8-Bit-Mario.png);background-repeat: no-repeat;background-position: top right; background-size: 51px}
+  nav ul {display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around;}
+  nav li {border-bottom: none;}
+  #smashhero {height: 300px;background-size: 100% 100%;}
+  .centered {margin: 0 auto; padding-left: 1em}
+  #franchisehero {height: 800px; margin-top: 3px;}
+
+
+ @supports (display: grid) {
+    left {grid-area: left;}
+    right {grid-area: right;}
+   #games-wrapper {
+   display: grid; 
+    gap: 1em;
+    grid-template: 
+    "left right"
+   }
+  }
+
+  @supports (display: grid) {
+    description {grid-area: description;}
+    recent {grid-area: recent;}
+    contactinfo {grid-area: contactinfo;} 
+    links {grid-area: links;}
+ #lower-wrapper {
+    display: grid; 
+    gap: 1em;
+    grid-template: 
+    "description recent"
+    "contactinfo links"
+     / 4fr 3fr;
+ }
+  }
+}
+
+ 
